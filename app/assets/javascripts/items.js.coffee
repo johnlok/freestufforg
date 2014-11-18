@@ -8,7 +8,7 @@ $ ->
     e.preventDefault
     $('#confirmation').hide()
     $('#formSubmission').show()
-    $('#listing_form').reset();
+    $('#listing_form').closest('form').find("input[type=text], textarea").val("");
 
   $('#submitListing').click (e) ->
     e.preventDefault
