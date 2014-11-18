@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dropzone
 //= require angular
 //= require_tree .

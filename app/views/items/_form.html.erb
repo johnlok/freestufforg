@@ -1,3 +1,12 @@
+<div class="photo-upload-container">
+  <form action="/media" id="media-dropzone" class="dropzone" enctype="multipart/form-data">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    <div class="fallback">
+      <input name="file" type="file" multiple />
+    </div>
+  </form>
+</div>
+
 <%= form_for(@item, remote: true, :html => { :id => 'listing_form' }) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
