@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'remotipart', '~> 1.2'
 gem "rmagick"
 gem "carrierwave"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
