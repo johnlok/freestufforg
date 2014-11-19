@@ -136,6 +136,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    remotipart (1.2.1)
     sass (3.4.6)
     sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
@@ -184,12 +185,13 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.0.beta2)
-  paperclip (~> 4.1)
+  paperclip (~> 4.2)
   pg
   pry
   pry-rails
   rails (= 4.2.0.beta2)
   rails_12factor
+  remotipart (~> 1.2)
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)
   spring
