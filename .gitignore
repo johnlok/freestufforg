@@ -29,3 +29,6 @@ config/initializers/secret_token.rb
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+
+#ignoring images
+public/uploads/item_attachment/image/4/
