@@ -39,10 +39,16 @@
     <%= f.label :sms_notify %><br>
     <%= f.check_box :sms_notify %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
+
+   <%= f.fields_for :post_attachments do |p| %>
+     <div class="field">
+       <%= p.label :image %><br>
+       <%= p.file_field :image, :multiple => true, name: "item_attachments[image][]" %>
+     </div>
+   <% end %>
+
+
+
   <div class="actions" id="submitListing">
     <%= f.submit %>
   </div>

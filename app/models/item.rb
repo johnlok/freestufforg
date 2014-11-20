@@ -1,3 +1,4 @@
 class Item < ActiveRecord::Base
-  mount_uploader :image, ImageUploader
+  has_many :item_attachments
+  accepts_nested_attributes_for :item_attachments
 end

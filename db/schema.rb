@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20141120073541) do
 
   create_table "item_attachments", force: true do |t|
     t.integer  "item_id"
-    t.string   "avatar"
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,22 +28,9 @@ ActiveRecord::Schema.define(version: 20141120073541) do
     t.string   "lister_email"
     t.string   "lister_tel"
     t.boolean  "sms_notify"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "image"
-  end
-
-  create_table "uploads", force: true do |t|
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
 end

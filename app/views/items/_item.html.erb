@@ -3,5 +3,7 @@
   <td><%= item.location %></td>
   <td><%= item.description %></td>
   <td><%= item.expiry_date %></td>
-  <td><%= image_tag item.image_url.to_s %></td>
+  <% item.item_attachments.each do |p| %>
+    <td><%= image_tag p.image_url(:thumb) %><td>
+  <% end %>
 </tr>

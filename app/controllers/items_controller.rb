@@ -11,11 +11,13 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @item_attachments = @item.item_attachments.all
   end
 
   # GET /items/new
   def new
     @item = Item.new
+    @item_attachment = @item.item_attachments.build
   end
 
   # GET /items/1/edit
@@ -29,6 +31,9 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
+        params[:item_attachments]['image'].each do |a|
+          @item_attachment = @item.item_attachments.create!(:image => a, :item_id => @item.id)
+        end
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.js   {}
         format.json { render json: @item, status: :created, location: @item }
