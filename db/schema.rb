@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119163617) do
+ActiveRecord::Schema.define(version: 20141120073541) do
+
+  create_table "item_attachments", force: true do |t|
+    t.integer  "item_id"
+    t.string   "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "items", force: true do |t|
     t.string   "title"
