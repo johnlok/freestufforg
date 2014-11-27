@@ -57,6 +57,8 @@ App.controller("ListController", ["$scope", "$http", ($scope, $http) ->
 
   $scope.locations = ['Wan Chai','Central','Causeway Bay','Tsim Sha Tsui','Stanley']
 
+
+
   $scope.save = ->
     console.log "you submitted some stuff bro"
     console.log $scope.form
@@ -106,6 +108,10 @@ App.controller("ListController", ["$scope", "$http", ($scope, $http) ->
     $scope.currentItem = item
 
   $scope.loadItems()
+
+  # $scope.showHoverDetails = ->
+  #   @scope.hoverItemDetails = false
+
   ])
 
 
